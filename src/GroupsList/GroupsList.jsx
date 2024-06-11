@@ -77,9 +77,8 @@ export default function GroupsList() {
         :(
             allData.length > 0 ? (
                 DataPerPage?.map((group, index) => (
-                  <a
+                  <div
                     className={`${styles.group} group text-black col-lg-3 col-sm-5 m-3 px-2 rounded shadow `}
-                    onClick={()=> navigate(`posts/${index}`)}
                   >
                     <div className="d-flex justify-content-between my-3 mx-3">
                       <h3 className="">{group.name}</h3>
@@ -117,11 +116,16 @@ export default function GroupsList() {
                         </ul>
                       </div>
                     </div>
+                    <a 
+                    className={`${styles.details}  text-black  `}
+                    onClick={()=> navigate(`posts/${index}`)}
+                    >
                     <p className="mb-3 ps-3">{group.description}</p>
                     <p className="text-start text-danger ps-3">
                       {group.creationDate}
                     </p>
-                  </a>
+                    </a>
+                  </div>
                 ))
               ) : (
                 <NoData />
