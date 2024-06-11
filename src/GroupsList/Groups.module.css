@@ -1,0 +1,8 @@
+.group{
+    background-color: white;
+    text-decoration: none;
+}
+.group:hover{
+    background-color: rgba(255, 99, 71, 0.1);
+    cursor: pointer;
+}
