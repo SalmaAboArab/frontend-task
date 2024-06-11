@@ -50,6 +50,7 @@ export default function GroupsList() {
         id:Date.now(),
         name:data.name,
         description:data.description,
+        posts:[],
         creationDate:`${new Date()}`.slice(0,21)
     }
     allGroupsData.push(newGroup);
