@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import "./App.css";
 import NotFound from "./SharedModule/Components/NotFound/NotFound";
 import MasterLayout from "./SharedModule/Components/MasterLayout/MasterLayout";
@@ -7,7 +7,7 @@ import PostDetails from "./Posts/Components/PostDetails/PostDetails";
 import PostsList from "./Posts/Components/PostsList/PostsList";
 
 function App() {
-  const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {
       path: "/",
       element: <MasterLayout />,
